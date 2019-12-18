@@ -1,0 +1,45 @@
+##security:
+##  require-ssl: false
+##server:
+##  port: 8080
+##spring:
+##  kafka:
+##    consumer:
+##      bootstrap-servers: b-1.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094,b-2.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094,b-3.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094
+##      group-id: group-id
+##      auto-offset-reset: earliest
+##      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+##      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+##    producer:
+##      bootstrap-servers: b-1.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094,b-2.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094,b-3.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094
+##      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+##      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#spring:
+#  kafka:
+#    bootstrap-servers: localhost:9092
+#    consumer:
+#      bootstrap-servers: localhost:9092
+#      auto-offset-reset: earliest
+#    producer:
+#      bootstrap-servers: localhost:9092
+#    zookeeper:
+#      connect: localhost:2181
+#    topic:
+#      name: kafkatesting-a
+#      greeting: kafkagreeting
+
+
+#####kafka######
+spring:
+  kafka:
+    bootstrap-servers: b-1.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094,b-2.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094,b-3.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094
+    consumer:
+      bootstrap-servers: b-1.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094,b-2.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094,b-3.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094
+      auto-offset-reset: earliest
+    producer:
+      bootstrap-servers: b-1.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094,b-2.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094,b-3.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:9094
+    zookeeper:
+      connect: z-1.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:2181,z-3.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:2181,z-2.usdev-kcs-kafka.dhyrm7.c2.kafka.us-west-2.amazonaws.com:2181
+    topic:
+      name: kafkatesting
+      greeting: kafkagreeting
